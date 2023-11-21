@@ -1,7 +1,6 @@
 package com.youcode.marjanv2.Controllers;
 
 import com.youcode.marjanv2.Models.Dto.CategoryDto;
-import com.youcode.marjanv2.Models.Entity.Admin;
 import com.youcode.marjanv2.Models.Entity.Category;
 import com.youcode.marjanv2.Services.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,11 +15,11 @@ import java.util.Optional;
 @Controller
 @RestController
 @RequestMapping("/api/v1/categories")
-public class CategeryController {
+public class CategoryController {
     private final CategoryService categoryService;
     
     @Autowired
-    public CategeryController(CategoryService categoryService) {
+    public CategoryController(CategoryService categoryService) {
         this.categoryService = categoryService;
     }
 

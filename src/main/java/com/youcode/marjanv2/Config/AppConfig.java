@@ -14,4 +14,7 @@ public class AppConfig {
         modelMapper.getConfiguration().setAmbiguityIgnored(true);
         return modelMapper;
     }
+
+    // ioc inversion of controller
+    // cdi context and dependency injection
 }

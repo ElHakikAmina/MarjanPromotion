@@ -22,6 +22,7 @@ public class AdminController {
     public AdminController(AdminService adminService) {
         this.adminService = adminService;
     }
+
     @Autowired
     private EmailService emailService;
     @GetMapping

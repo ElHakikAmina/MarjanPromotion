@@ -21,7 +21,6 @@ public class AdminService {
         this.adminRepository = adminRepository;
     }
 
-
     public void saveAdmin(Admin admin) {
         adminRepository.save(admin);
         System.out.println(admin);

@@ -1,0 +1,54 @@
+#Liquibase est un outil open-source de gestion de schéma de base de données. Il permet de suivre, gérer et appliquer les modifications de schéma de manière contrôlée et cohérente sur plusieurs environnements de base de données.
+#fichier pour gerer le chema de la table user
+databaseChangeLog:
+  - changeSet:
+      id: create_base_user_table
+      author: amina
+      changes:
+        - createTable:
+            tableName: base_user
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: email
+                  type: VARCHAR(255)
+              - column:
+                  name: password
+                  type: VARCHAR(255)
+
+  - changeSet:
+      id: create_responsable_center_table
+      author: your_author_name_here
+      changes:
+        - createTable:
+            tableName: responsable_center
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: email
+                  type: VARCHAR(255)
+              - column:
+                  name: password
+                  type: VARCHAR(255)
+              - column:
+                  name: center_id
+                  type: BIGINT
+                  constraints:
+                    foreignKeyName: fk_center_id
+                    references: center(id)

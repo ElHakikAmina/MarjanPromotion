@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MarjanV2Application {
+public class Marjan {
     public static void main(String[] args) {
-        SpringApplication.run(MarjanV2Application.class, args);
+        SpringApplication.run(Marjan.class, args);
     }
 
 }

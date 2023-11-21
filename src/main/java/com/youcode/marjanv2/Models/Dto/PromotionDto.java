@@ -18,7 +18,6 @@ public class PromotionDto {
     private String description;
     private Double discountPercentage;
     private Long categoryId;
-
     private List<Long> productIds;
 
     public static PromotionDto fromEntity(Promotion promotion) {
