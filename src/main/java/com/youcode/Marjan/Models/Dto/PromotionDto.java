@@ -4,6 +4,7 @@ import com.youcode.Marjan.Models.Entity.Product;
 import com.youcode.Marjan.Models.Entity.Promotion;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -18,7 +19,7 @@ public class PromotionDto {
     private String description;
     private Double discountPercentage;
     private Long categoryId;
-    private List<Long> productIds;
+    private List<Long> productIds = new ArrayList<>();
 
     public static PromotionDto fromEntity(Promotion promotion) {
         return PromotionDto.builder()
